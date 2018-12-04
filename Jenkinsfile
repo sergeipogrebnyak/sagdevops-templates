@@ -187,7 +187,7 @@ pipeline {
                     steps {
                         sh 'docker-compose pull cc'
                         sh 'docker-compose up -V -d --remove-orphans cc'
-
+                        sh 'sleep 30'
                         sh './provisionw sag-um-server'
                         sh './provisionw sag-um-config'
 
